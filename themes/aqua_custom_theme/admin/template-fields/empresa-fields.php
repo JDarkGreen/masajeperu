@@ -139,6 +139,42 @@ function custom_atention_render()
 }
 
 
+/*----------------------*
+* SECCION APTITUDES
+*------------------------*/
+add_settings_section( PREFIX."_themePage_section_aptitudes" , __( 'Personalizar Aptitudes Empresa:' , 'LANG' ), 'custom_settings_section_aptitudes_callback', 'customThemePageEmpresa' );
+
+function custom_settings_section_aptitudes_callback()
+{ 
+	echo __( 'Setea información aquí', 'LANG' );
+}
+
+
+//MISIÓN
+add_settings_field( 'theme_mision_text', __( 'Misión Empresa:', 'LANG' ), 'custom_mision_render', 'customThemePageEmpresa', PREFIX."_themePage_section_aptitudes" );
+
+function custom_mision_render() 
+{ 
+	$options = get_option( 'theme_settings' ); 
+	?>
+	<textarea id="theme_mision_text" class='js-field-ajax textarea-field'><?= !empty($options['theme_mision_text']) ? $options['theme_mision_text'] : "" ; ?></textarea>
+	<?php
+}
+
+
+//VISIÓN
+add_settings_field( 'theme_vision_text', __( 'Visión Empresa:', 'LANG' ), 'custom_vision_render', 'customThemePageEmpresa', PREFIX."_themePage_section_aptitudes" );
+
+function custom_vision_render() 
+{ 
+	$options = get_option( 'theme_settings' ); 
+	?>
+	<textarea id="theme_vision_text" class='js-field-ajax textarea-field'><?= !empty($options['theme_vision_text']) ? $options['theme_vision_text'] : "" ; ?></textarea>
+	<?php
+}
+
+
+
 
 
 

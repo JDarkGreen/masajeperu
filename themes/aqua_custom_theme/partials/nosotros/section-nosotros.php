@@ -30,8 +30,7 @@ $options = get_option("theme_settings");
 			<div class="col-xs-12 col-sm-3">
 
 				<!-- titulo -->
-				<h2 class="title text-uppercase"> <?= __('horarios de apertura:'); ?> 
-				</h2>
+				<h2 class="title text-uppercase"> <?= __('MASAJES PERÚ:',LANG); ?> </h2>
 
 				<!-- Contenido -->
 				<?= apply_filters( 'the_content' , $page_nosotros->post_content ); ?>

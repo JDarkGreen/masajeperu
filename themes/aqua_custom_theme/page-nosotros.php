@@ -33,13 +33,40 @@ include( locate_template('partials/banner-top-page.php') );
 include( locate_template('partials/nosotros/section-nosotros.php') );
 
 
-/*
- * Importar Sección Staff
- */
-
-include( locate_template('partials/nosotros/section-staff.php') );
-
 ?>
+
+<!-- Wrapper de Contenido / Contenedor Layout -->
+<div class="pageWrapperLayout containerRelative">
+
+	<!-- Sección de Aptitudes -->
+	<section id="sectionAptitudes">
+
+		<!-- Título -->
+		<h2 class="title-aptitudes text-capitalize">
+			<?= __('misión',LANG); ?>
+		</h2> <!-- /.title-aptitudes -->
+
+		<div>
+			<?php echo $text_mision = isset($options['theme_mision_text']) && !empty($options['theme_mision_text']) ? $options['theme_mision_text'] : '';	
+		?>		
+		</div>
+
+		<!-- Espacio --> <br/><br/>
+
+		<!-- Título -->
+		<h2 class="title-aptitudes text-capitalize">
+			<?= __('visión',LANG); ?>
+		</h2> <!-- /.title-aptitudes -->
+		
+		<div>
+		<?php echo $text_mision = isset($options['theme_vision_text']) && !empty($options['theme_vision_text']) ? $options['theme_vision_text'] : '';
+		?>	</div>	
+
+		<!-- Espacio --> <br/><br/>
+		
+	</section> <!-- /#sectionAptitudes -->
+
+</div> <!-- /.pageWrapperLayout containerRelative -->
 
 
 
