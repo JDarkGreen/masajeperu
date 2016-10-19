@@ -15,10 +15,10 @@
 	<!-- Contenedor Layout -->
 	<div class="pageWrapperLayout">
 
-		<div class="row">
+		<div class="containerFlex text-xs-center">
 		
 			<!-- Left menu -->
-			<div class="col-sm-5">
+			<div class="column-navigation">
 			<?php 
 				wp_nav_menu(
 					array(
@@ -26,10 +26,10 @@
 					'theme_location' => 'left-menu'
 				));
 			?>
-			</div> <!-- /col-sm-5 -->
+			</div> <!-- /column-navigation -->
 
 			<!-- Logo -->
-			<div class="col-sm-2">
+			<div class="column-navigation column-navigation--logo">
 				
 				<h1 id="mainLogo">
 					<a href="<?= site_url(); ?>">
@@ -37,10 +37,10 @@
 					</a>
 				</h1> <!-- /.mainLogo -->
 
-			</div> <!-- /.col-sm-2 -->
+			</div> <!-- /.-->
 
 			<!-- Right menu -->
-			<div class="col-sm-5">
+			<div class="column-navigation">
 			<?php 
 				wp_nav_menu(
 					array(
@@ -48,9 +48,9 @@
 					'theme_location' => 'right-menu'
 				));
 			?>
-			</div> <!-- /col-sm-5 -->
+			</div> <!-- /column-navigation -->
 			
-		</div> <!-- /.row -->
+		</div> <!-- /.table -->
 
 	</div> <!-- /.pageWrapperLayout -->
 	
