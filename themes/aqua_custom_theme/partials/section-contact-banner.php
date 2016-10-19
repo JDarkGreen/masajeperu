@@ -14,9 +14,9 @@ $page_contacto_link = !empty($page_contacto) ? get_permalink( $page_contacto->ID
 	<div class="content-text m-x-auto containerFlex containerAlignContent text-xs-center">
 
 		<!-- Titulo -->
-		<h2 class=""> <?= __("Siente la experiencia en el Spa" , LANG ); ?></h2>
+		<h2 class=""> <?= __("Masajes Terapéuticos" , LANG ); ?></h2>
 		<!-- Boton -->
-		<a href="<?= $page_contacto_link; ?>" class="btn-show-more btn-show-more--gray text-uppercase"> Contáctanos ahora </a>
+		<a href="<?= $page_contacto_link; ?>" class="btn-show-more btn-show-more--gray text-uppercase">  Contáctanos ahora  </a>
 
 	</div> <!-- /.content-text -->
 
