@@ -38,22 +38,6 @@ include( locate_template('partials/banner-top-page.php') );
 	);
 	
 	$gal_images = get_posts( $args );
-
-if( $gal_images ) :
-
-/**
-  * Escoger la primera galeria
-  */
-$the_gallery = $gal_images[0];
-
-/**
-  * Enviar el parametro id a la funcion customizada galeria
-  */
-
-$gallery_post = get_gallery_post( $the_gallery->ID );
-
-endif;
-
 ?>
 
 <!-- Contenedor Sección -->
@@ -62,15 +46,21 @@ endif;
 	<!-- Wrapper de Contenido / Contenedor Layout -->
 	<div class="pageWrapperLayout containerRelative">
 
-		<?php if( isset($gallery_post) && !empty($gallery_post) ) : ?>
+		<?php if( isset($gal_images) && !empty($gal_images) ) : ?>
 			
 			<div class="containerFlex">
-				<?php foreach( $gallery_post as $image ) : ?>
+				<?php foreach( $gal_images as $image ) : 
+
+					if( has_post_thumbnail($image->ID) ):
+
+					/* Imágen Url */
+					$url_image = wp_get_attachment_url( get_post_thumbnail_id($image->ID) );
+				?>
 				
 				<!-- Imagen -->
-				<a href="<?= $image->guid; ?>" class="itemPreviewImage containerRelative gallery-fancybox" rel="galeria-images">
+				<a href="<?= $url_image; ?>" class="itemPreviewImage containerRelative gallery-fancybox" rel="galeria-images">
 					
-					<figure class="featured-image" style="background-image : url(<?= $image->guid; ?>)"></figure> <!-- /itemPreviewImage -->
+					<figure class="featured-image" style="background-image : url(<?= $url_image; ?>)"></figure> <!-- /itemPreviewImage -->
 
 					<!-- Icono on hover -->
 					<span class="icon-zoom containerFlex containerAlignContent">
@@ -80,7 +70,7 @@ endif;
 
 				</a> <!-- /gallery fancybox -->
 
-				<?php endforeach; ?>
+				<?php endif; endforeach; ?>
 			</div>
 
 		<?php endif; ?>
