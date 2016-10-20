@@ -59,22 +59,6 @@ $link_page_products = !empty($page_products) ? get_permalink($page_products->ID)
 							<img src="https://unsplash.it/215/255" alt="<?= $last_product->post_name; ?>" class="img-fluid d-block m-x-auto" />
 
 						<?php endif; ?>
-
-						<!-- Calificación de Estrellas -->
-						<div class="qualify-stars">
-							
-							<?php  
-								$mb_stars = get_post_meta( $last_product->ID , 'product_qualify' , true );
-								$mb_stars = !empty($mb_stars) ? intval($mb_stars) : 0;
-
-								for( $i = 0 ; $i < $mb_stars ; $i++ ){
-							?>
-								<!-- Icon -->
-								<i class="fa fa-star" aria-hidden="true"></i>
-					
-							<?php } ?>
-
-						</div> <!-- /.qualify-stars -->
 						
 						<!-- Link to producto -->
 						<!--div class="content-detail">
@@ -103,6 +87,22 @@ $link_page_products = !empty($page_products) ? get_permalink($page_products->ID)
 						<span class="price-offer"> <?= !empty($current_price['offer']) ? $current_price['offer'] : ''; ?></span> <!--  -->
 
 						<!-- Limpiar floats --> <div class="clearfix"></div>
+
+						<!-- Calificación de Estrellas -->
+						<div class="qualify-stars">
+							
+							<?php  
+								$mb_stars = get_post_meta( $last_product->ID , 'product_qualify' , true );
+								$mb_stars = !empty($mb_stars) ? intval($mb_stars) : 0;
+
+								for( $i = 0 ; $i < $mb_stars ; $i++ ){
+							?>
+								<!-- Icon -->
+								<i class="fa fa-star" aria-hidden="true"></i>
+					
+							<?php } ?>
+
+						</div> <!-- /.qualify-stars -->
 
 					</div> <!-- /.content-text -->
 

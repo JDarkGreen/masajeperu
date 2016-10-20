@@ -14,8 +14,8 @@
 	box-sizing : border-box
 	display    : inline-block 
 	font-family: "Montserrat" , sans-serif
+	height     : 396px
 	margin     : 0 auto 15px
-	min-height : 370px
 	overflow   : hidden
 	width      : 100%
 
@@ -35,15 +35,6 @@
 			.content-detail
 				+opacity( 1 )
 
-		//Calificador de Estrellas
-		.qualify-stars
-			bottom  : 14px
-			position: absolute 
-			right   : 14px
-			//Icon
-			i 
-				color: #8FD5BC
-	
 	//Contenedor Detalle
 	.content-detail
 		+opacity( 0 )
@@ -89,6 +80,15 @@
 				+opacity( .4 )
 
 
+//Calificador de Estrellas
+.qualify-stars
+	bottom  : 14px
+	right   : 14px
+	//Icon
+	i 
+		color: #DDBC61
+
+
 /**
   * Contenedor de Página
   */ 
@@ -101,5 +101,5 @@
 		width : calc( (100%/4) - ( (3*10px) /4 ) )
 		
 		/* Cuarto elemento o final */
-		&:last-child , &:nth-child(4)
+		&:last-child , &:nth-child(4n)
 			margin-right: 0
