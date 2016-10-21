@@ -11,14 +11,14 @@
 
 <?php  
 	//Varibles colores de plantila - en hexadecimal
-	$bg_header     = "#7D767C";
+	$bg_header     = "#000000";
 	$bg_body       = "#ffffff";
-	$bg_footer     = "#61D5CD";
+	$bg_footer     = "#DDBC61";
 	$bg_ingenioart = "#0074BB";
 	
-	$name_empresa  = "Aqua Spa: Relajaci&oacute;n";
-	$link_web      = "http://iuigv.com/aqua/";
-	$url_image     = "http://iuigv.com/aqua/wp-content/uploads/2016/09/logo_spa.png";
+	$name_empresa  =  utf8_decode("Masajes Perú: Relajación");
+	$link_web      = "http://masajesperu.com.pe/";
+	$url_image     = "http://masajesperu.com.pe/wp-content/themes/aqua_custom_theme/assets/images/logo.png";
 ?>
 
 
@@ -29,9 +29,9 @@
 		<tr>
 			<td align="center" bgcolor="<?= $bg_header; ?>" style="padding: 20px 0 20px 0;">
 
-				<a href="<?= $link_web; ?>" target="_blank" style="display:inline-block; border: 2px solid #ffffff;">
+				<a href="<?= $link_web; ?>" target="_blank" style="display:inline-block;">
 
-					<img src="<?= $url_image; ?>" alt="Mail Template by Ingenioart - JGreen" width="250" height="60" style="display: block;" />
+					<img src="<?= $url_image; ?>" alt="Mail Template by Ingenioart - JGreen" width="258" height="85" style="display: block;" />
 
 				</a> 
 			</td>
@@ -45,7 +45,7 @@
 					
 					<tr>
 						<td>
-							<h2> <?= $name_empresa; ?>  </h2>
+							<h2> <?= utf8_decode($name_empresa); ?>  </h2>
 						</td>
 					</tr>					
 					<tr>
@@ -58,17 +58,17 @@
 
 								<tr>
 									<td><strong> Nombre:</strong></td>
-									<td> <?= $name; ?> </td>
+									<td> <?= utf8_decode($name); ?> </td>
 								</tr>								
 
 								<tr>
 									<td><strong> Email:</strong></td>
-									<td> <?= $email; ?></td>
+									<td> <?= utf8_decode($email); ?></td>
 								</tr>
 
 								<tr>
 									<td><strong> Direcci&oacute;n :</strong></td>
-									<td> <?= $address; ?></td>
+									<td> <?= utf8_decode($address); ?></td>
 								</tr>	
 
 								<tr>
@@ -81,7 +81,7 @@
 								</tr>
 
 								<tr>
-									<td> <?= $message; ?> </td>
+									<td> <?= utf8_decode($message); ?> </td>
 								</tr>
 
 							</table>

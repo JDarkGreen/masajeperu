@@ -71,7 +71,7 @@
 
 	$mail->IsHTML(true); // send as HTML
 
-	$mail->Subject = "Formulario Web: Aqua Spa";
+	$mail->Subject = utf8_decode("Formulario Web: " . get_bloginfo('name') );
 
 	// Activar el almacenamiento en búfer de la salida
 	ob_start();
