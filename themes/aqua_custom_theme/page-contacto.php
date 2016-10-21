@@ -97,6 +97,20 @@ include( locate_template('partials/banner-top-page.php') );
 					<p class="featured">
 						<?= isset($options['theme_email_text']) ? $options['theme_email_text'] : ''; ?>
 					</p>
+
+					<!-- Celulares -->
+					<p>
+						<?php  
+							for ( $i=1 ;  $i <= 5 ;  $i++) 
+							{ 
+								$phone = isset($options['theme_phone_text_'.$i]) ? $options['theme_phone_text_'.$i] : '';
+
+								echo $i !== 1 && !empty($phone) ? ' / ' : '';
+								echo $phone;
+
+							}
+						?>
+					</p>
 					
 				</div> <!-- /.itemContact -->
 				
